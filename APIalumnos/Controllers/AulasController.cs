@@ -22,9 +22,15 @@ namespace APIalumnos.Controllers
             return db.Aula;
         }
 
-        public IQueryable<Aula> GetAulaDimension(int dim)
+        [HttpGet]
+        public IQueryable<Aula> ObtenerPorDimension(int dim)
         {
             return db.Aula.Where(o=>o.capacidad>=dim);
+        }
+
+        public IQueryable<Aula> GetAulaNombre(String nombre)
+        {
+            return db.Aula.Where(o => o.nombre.Contains(nombre));
         }
 
         // GET: api/Aulas/5

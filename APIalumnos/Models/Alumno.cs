@@ -14,12 +14,12 @@ namespace APIalumnos.Models
     
     public partial class Alumno
     {
+        
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Alumno()
         {
             this.Curso = new HashSet<Curso>();
         }
-    
         public int idAlumno { get; set; }
         public string dni { get; set; }
         public string nombre { get; set; }

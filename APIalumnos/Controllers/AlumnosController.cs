@@ -14,8 +14,9 @@ namespace APIalumnos.Controllers
 {
     public class AlumnosController : ApiController
     {
-        private Alumno15Entities db = new Alumno15Entities();
 
+        private Alumno15Entities db = new Alumno15Entities();
+        
         // GET: api/Alumnos
         public IQueryable<Alumno> GetAlumno()
         {
@@ -114,5 +115,43 @@ namespace APIalumnos.Controllers
         {
             return db.Alumno.Count(e => e.idAlumno == id) > 0;
         }
+
+
+        ///////////////
+
+
+        public ICollection<Alumno> GetAlumnoCurso(int curso)
+        {
+
+            var c = db.Curso.FirstOrDefault(o => o.idCurso == curso);
+            if (c == null)
+                return null;
+
+            return c.Alumno.ToList();
+        }
+
+        public IQueryable<Alumno> GetAlumnoNombre(string nombre)
+        {
+            return db.Alumno.Where(o => o.nombre.Contains(nombre));
+        }
+
+        public ICollection<Alumno> GetAlumnoProfesor(int profesor)
+        {
+
+            var c = db.ProfesorCurso.Where(o => o.idProfesor == profesor).Select(o => o.idCurso);
+
+            var lc = db.Curso.Where(o => c.Contains(o.idCurso)).Select(o => o.Alumno);
+            var l = new List<Alumno>();
+
+            foreach (var a in lc)
+            {
+                l.AddRange(a);
+            }
+            return l;
+
+
+
+        }
+
     }
 }

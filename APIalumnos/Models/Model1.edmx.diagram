@@ -5,11 +5,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="c9a77c679a41487cb23d36d02259a8d3" Name="Diagram1">
-        <EntityTypeShape EntityType="Alumno15Model.Alumno" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Alumno15Model.Alumno" Width="1.5" PointX="1.625" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Alumno15Model.Aula" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Alumno15Model.Curso" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="Alumno15Model.Profesor" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Alumno15Model.ProfesorCurso" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Alumno15Model.Curso" Width="1.5" PointX="3.875" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Alumno15Model.Profesor" Width="1.5" PointX="9" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Alumno15Model.ProfesorCurso" Width="1.5" PointX="6.25" PointY="2.125" IsExpanded="true" />
         <AssociationConnector Association="Alumno15Model.FK_Curso_Aula1" ManuallyRouted="false" />
         <AssociationConnector Association="Alumno15Model.FK_ProfesorCurso_Curso" ManuallyRouted="false" />
         <AssociationConnector Association="Alumno15Model.FK_ProfesorCurso_Profesor" ManuallyRouted="false" />

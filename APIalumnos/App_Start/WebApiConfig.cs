@@ -8,8 +8,10 @@ namespace APIalumnos
     //aqui se definen todas las tareas que queremos que se ejecuten
     public static class WebApiConfig
     {
+        
         public static void Register(HttpConfiguration config)
         {
+            
             // Web API configuration and services
             var json = config.Formatters.JsonFormatter;
             json.SerializerSettings.PreserveReferencesHandling =

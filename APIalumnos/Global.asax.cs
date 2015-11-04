@@ -12,6 +12,7 @@ namespace APIalumnos
         //define que hacer cuando la app carga
         protected void Application_Start()
         {
+
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }

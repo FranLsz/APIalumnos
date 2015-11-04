@@ -26,6 +26,5 @@ namespace APIalumnos.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Curso> Curso { get; set; }
-        //public ICollection<Curso> Curso { get; set; }
     }
 }
